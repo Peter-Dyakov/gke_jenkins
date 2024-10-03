@@ -1,0 +1,32 @@
+# values.yaml
+replicaCount: 1
+
+image:
+  repository: gcr.io/YOUR_PROJECT_ID/my-app  # Replace with your image
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: LoadBalancer
+  port: 3000
+
+mongodb:
+  enabled: true
+  image:
+    repository: mongo
+    tag: "5.0"
+  servicePort: 27017
+  storage:
+    size: 10Gi
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+nodeSelector: {}
+tolerations: []
+affinity: []
