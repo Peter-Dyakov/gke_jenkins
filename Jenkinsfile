@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      cloud "kubernetes"
+      cloud "k8s_assignment"
       yamlFile "build-agent.yaml"
     }
   }
