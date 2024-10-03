@@ -2,7 +2,7 @@ pipeline {
   agent {
     kubernetes {
       cloud "kubernetes"
-      yamlFile "agent-build.yaml"
+      yamlFile "build-agent.yaml"
     }
   }
   
